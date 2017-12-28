@@ -13,7 +13,7 @@ class Response
     protected $http_headers = array();
 
     /**
-     * レスポンスを送信
+     * send Response
      */
     public function send()
     {
@@ -27,7 +27,7 @@ class Response
     }
 
     /**
-     * コンテンツを設定
+     * set Content
      *
      * @param string $content
      */
@@ -37,7 +37,7 @@ class Response
     }
 
     /**
-     * ステータスコードを設定
+     * set Status Code
      *
      * @param integer $status_code
      * @param string $status_code
@@ -49,7 +49,7 @@ class Response
     }
 
     /**
-     * HTTPレスポンスヘッダを設定
+     * set HTTP Response Header
      *
      * @param string $name
      * @param mixed $value

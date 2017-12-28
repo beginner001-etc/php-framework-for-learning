@@ -12,7 +12,7 @@ class View
     protected $layout_variables = array();
 
     /**
-     * コンストラクタ
+     * constructor
      *
      * @param string $base_dir
      * @param array $defaults
@@ -24,7 +24,7 @@ class View
     }
 
     /**
-     * レイアウトに渡す変数を指定
+     * specify variable to pass to Layout
      *
      * @param string $name
      * @param mixed $value
@@ -35,7 +35,7 @@ class View
     }
 
     /**
-     * ビューファイルをレンダリング
+     * render View file
      *
      * @param string $_path
      * @param array $_variables
@@ -67,7 +67,7 @@ class View
     }
 
     /**
-     * 指定された値をHTMLエスケープする
+     * HTML escape specified value
      *
      * @param string $string
      * @return string

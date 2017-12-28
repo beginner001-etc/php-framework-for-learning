@@ -11,8 +11,8 @@ class Session
     protected static $sessionIdRegenerated = false;
 
     /**
-     * コンストラクタ
-     * セッションを自動的に開始する
+     * constructor
+     * automatically start Session
      */
     public function __construct()
     {
@@ -24,7 +24,7 @@ class Session
     }
 
     /**
-     * セッションに値を設定
+     * set value to Session
      *
      * @param string $name
      * @param mixed $value
@@ -35,10 +35,10 @@ class Session
     }
 
     /**
-     * セッションから値を取得
+     * get value from Session
      *
      * @param string $name
-     * @param mixed $default 指定したキーが存在しない場合のデフォルト値
+     * @param mixed $default Default value when specified key does not exist
      */
     public function get($name, $default = null)
     {
@@ -50,7 +50,7 @@ class Session
     }
 
     /**
-     * セッションから値を削除
+     * remove value from Session
      *
      * @param string $name
      */
@@ -60,7 +60,7 @@ class Session
     }
 
     /**
-     * セッションを空にする
+     * empty Session
      */
     public function clear()
     {
@@ -68,9 +68,9 @@ class Session
     }
 
     /**
-     * セッションIDを再生成する
+     * regenerate Session ID
      *
-     * @param boolean $destroy trueの場合は古いセッションを破棄する
+     * @param boolean $destroy if true, destroy old Session
      */
     public function regenerate($destroy = true)
     {
@@ -82,7 +82,7 @@ class Session
     }
 
     /**
-     * 認証状態を設定
+     * set Authentication status
      *
      * @param boolean
      */
@@ -94,7 +94,7 @@ class Session
     }
 
     /**
-     * 認証済みか判定
+     *Whether it is authenticated
      *
      * @return boolean
      */

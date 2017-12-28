@@ -17,7 +17,7 @@ abstract class Controller
     protected $auth_actions = array();
 
     /**
-     * コンストラクタ
+     * constructor
      *
      * @param Application $application
      */
@@ -33,13 +33,13 @@ abstract class Controller
     }
 
     /**
-     * アクションを実行
+     * run Action
      *
      * @param string $action
      * @param array $params
-     * @return string レスポンスとして返すコンテンツ
+     * @return string Content to be returned as Response
      *
-     * @throws UnauthorizedActionException 認証が必須なアクションに認証前にアクセスした場合
+     * @throws UnauthorizedActionException before Authentication, when Action requiring Authentication is accessed
      */
     public function run($action, $params = array())
     {
@@ -60,12 +60,12 @@ abstract class Controller
     }
 
     /**
-     * ビューファイルのレンダリング
+     * rendering View files
      *
-     * @param array $variables テンプレートに渡す変数の連想配列
-     * @param string $template ビューファイル名(nullの場合はアクション名を使う)
-     * @param string $layout レイアウトファイル名
-     * @return string レンダリングしたビューファイルの内容
+     * @param array $variables Associative array of variables passed to Template
+     * @param string $template View File name (use Action name if null)
+     * @param string $layout Layout File name
+     * @return string Contents of the rendered View file
      */
     protected function render($variables = array(), $template = null, $layout = 'layout')
     {
@@ -87,7 +87,7 @@ abstract class Controller
     }
 
     /**
-     * 404エラー画面を出力
+     * output 404 Error Page
      *
      * @throws HttpNotFoundException
      */
@@ -98,7 +98,7 @@ abstract class Controller
     }
 
     /**
-     * 指定されたURLへリダイレクト
+     * redirect to specified URL
      *
      * @param string $url
      */
@@ -117,7 +117,7 @@ abstract class Controller
     }
 
     /**
-     * CSRFトークンを生成
+     * generate CSRF Token
      *
      * @param string $form_name
      * @return string $token
@@ -139,7 +139,7 @@ abstract class Controller
     }
 
     /**
-     * CSRFトークンが妥当かチェック
+     * check CSRF Token
      *
      * @param string $form_name
      * @param string $token
@@ -161,7 +161,7 @@ abstract class Controller
     }
 
     /**
-     * 指定されたアクションが認証済みでないとアクセスできないか判定
+     * determine whether specified Action can not be accessed unless it is authenticated
      *
      * @param string $action
      * @return boolean

@@ -10,7 +10,7 @@ class ClassLoader
     protected $dirs;
 
     /**
-     * 自身をオートロードスタックに登録
+     * register itself in autoload stack
      */
     public function register()
     {
@@ -18,7 +18,7 @@ class ClassLoader
     }
 
     /**
-     * オートロード対象のディレクトリを登録
+     * register Directory to be autoloaded
      *
      * @param string $dir
      */
@@ -28,7 +28,7 @@ class ClassLoader
     }
 
     /**
-     * クラスを読み込む
+     * load Class
      *
      * @param string $class
      */

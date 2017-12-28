@@ -12,7 +12,7 @@ class DbManager
     protected $repositories = array();
 
     /**
-     * データベースへ接続
+     * connect to Database
      *
      * @param string $name
      * @param array $params
@@ -39,7 +39,7 @@ class DbManager
     }
 
     /**
-     * コネクションを取得
+     * get Connection
      *
      * @string $name
      * @return PDO
@@ -54,7 +54,7 @@ class DbManager
     }
 
     /**
-     * リポジトリごとのコネクション情報を設定
+     * set Connection information for each Repository
      *
      * @param string $repository_name
      * @param string $name
@@ -65,7 +65,7 @@ class DbManager
     }
 
     /**
-     * 指定されたリポジトリに対応するコネクションを取得
+     * get Connection corresponding to specified Repository
      *
      * @param string $repository_name
      * @return PDO
@@ -83,7 +83,7 @@ class DbManager
     }
 
     /**
-     * リポジトリを取得
+     * get Repository
      *
      * @param string $repository_name
      * @return DbRepository
@@ -103,8 +103,8 @@ class DbManager
     }
 
     /**
-     * デストラクタ
-     * リポジトリと接続を破棄する
+     * destructor
+     * destroy Repository and Connection
      */
     public function __destruct()
     {

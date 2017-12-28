@@ -14,7 +14,7 @@ abstract class Application
     protected $db_manager;
 
     /**
-     * コンストラクタ
+     * constructor
      *
      * @param boolean $debug
      */
@@ -26,7 +26,7 @@ abstract class Application
     }
 
     /**
-     * デバッグモードを設定
+     * set Debug Mode
      * 
      * @param boolean $debug
      */
@@ -43,7 +43,7 @@ abstract class Application
     }
 
     /**
-     * アプリケーションの初期化
+     * initialize Application
      */
     protected function initialize()
     {
@@ -55,28 +55,28 @@ abstract class Application
     }
 
     /**
-     * アプリケーションの設定
+     * Application Settings
      */
     protected function configure()
     {
     }
 
     /**
-     * プロジェクトのルートディレクトリを取得
+     * get Project Root Directory
      *
-     * @return string ルートディレクトリへのファイルシステム上の絶対パス
+     * @return string absolute Path on File system to Root Directory
      */
     abstract public function getRootDir();
 
     /**
-     * ルーティングを取得
+     * get Routing
      *
      * @return array
      */
     abstract protected function registerRoutes();
 
     /**
-     * デバッグモードか判定
+     * determine whether it is in Debug Mode
      *
      * @return boolean
      */
@@ -86,7 +86,7 @@ abstract class Application
     }
 
     /**
-     * Requestオブジェクトを取得
+     * get Request Object
      *
      * @return Request
      */
@@ -96,7 +96,7 @@ abstract class Application
     }
 
     /**
-     * Responseオブジェクトを取得
+     * get Response Object
      *
      * @return Response
      */
@@ -106,7 +106,7 @@ abstract class Application
     }
 
     /**
-     * Sessionオブジェクトを取得
+     * get Session Object
      *
      * @return Session
      */
@@ -116,7 +116,7 @@ abstract class Application
     }
 
     /**
-     * DbManagerオブジェクトを取得
+     * get DbManager Object
      *
      * @return DbManager
      */
@@ -126,7 +126,7 @@ abstract class Application
     }
 
     /**
-     * コントローラファイルが格納されているディレクトリへのパスを取得
+     * get Directory Path where Controller file is stored
      *
      * @return string
      */
@@ -136,7 +136,7 @@ abstract class Application
     }
 
     /**
-     * ビューファイルが格納されているディレクトリへのパスを取得
+     * get Directory Path where View file is stored
      *
      * @return string
      */
@@ -146,7 +146,7 @@ abstract class Application
     }
 
     /**
-     * モデルファイルが格納されているディレクトリへのパスを取得
+     * get Directory Path where Model file is stored
      *
      * @return stirng
      */
@@ -156,7 +156,7 @@ abstract class Application
     }
 
     /**
-     * ドキュメントルートへのパスを取得
+     * get Path to Document Root
      *
      * @return string
      */
@@ -166,9 +166,9 @@ abstract class Application
     }
 
     /**
-     * アプリケーションを実行する
+     * run Application
      *
-     * @throws HttpNotFoundException ルートが見つからない場合
+     * @throws HttpNotFoundException Route not found
      */
     public function run()
     {
@@ -193,13 +193,13 @@ abstract class Application
     }
 
     /**
-     * 指定されたアクションを実行する
+     * run specified Action
      *
      * @param string $controller_name
      * @param string $action
      * @param array $params
      *
-     * @throws HttpNotFoundException コントローラが特定できない場合
+     * @throws HttpNotFoundException Controller can not be specified
      */
     public function runAction($controller_name, $action, $params = array())
     {
@@ -216,7 +216,7 @@ abstract class Application
     }
 
     /**
-     * 指定されたコントローラ名から対応するControllerオブジェクトを取得
+     * find corresponding Controller Object from specified Controller name
      *
      * @param string $controller_class
      * @return Controller
@@ -240,7 +240,7 @@ abstract class Application
     }
 
     /**
-     * 404エラー画面を返す設定
+     * Setting to return 404 Error Page
      *
      * @param Exception $e
      */

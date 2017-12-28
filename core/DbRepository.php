@@ -10,7 +10,7 @@ abstract class DbRepository
     protected $con;
 
     /**
-     * コンストラクタ
+     * constructor
      *
      * @param PDO $con
      */
@@ -20,7 +20,7 @@ abstract class DbRepository
     }
 
     /**
-     * コネクションを設定
+     * set Connection
      *
      * @param PDO $con
      */
@@ -30,7 +30,7 @@ abstract class DbRepository
     }
 
     /**
-     * クエリを実行
+     * execute Query
      *
      * @param string $sql
      * @param array $params
@@ -45,7 +45,7 @@ abstract class DbRepository
     }
 
     /**
-     * クエリを実行し、結果を1行取得
+     * execute Query and get a row of Results
      *
      * @param string $sql
      * @param array $params
@@ -58,7 +58,7 @@ abstract class DbRepository
 
 
     /**
-     * クエリを実行し、結果をすべて取得
+     * execute Query and get all Results
      *
      * @param string $sql
      * @param array $params

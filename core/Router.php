@@ -10,7 +10,7 @@ class Router
     protected $routes;
 
     /**
-     * コンストラクタ
+     * constructor
      *
      * @param array $definitions
      */
@@ -20,7 +20,7 @@ class Router
     }
 
     /**
-     * ルーティング定義配列を内部用に変換する
+     * convert Routing definition array for internal use
      *
      * @param array $definitions
      * @return array
@@ -47,7 +47,7 @@ class Router
     }
 
     /**
-     * 指定されたPATH_INFOを元にルーティングパラメータを特定する
+     * identify Routing parameter based on specified PATH_INFO
      *
      * @param string $path_info
      * @return array|false

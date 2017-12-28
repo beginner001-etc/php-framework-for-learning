@@ -8,7 +8,7 @@
 class Request
 {
     /**
-     * リクエストメソッドがPOSTかどうか判定
+     * determine if Request method is POST
      *
      * @return boolean
      */
@@ -22,10 +22,10 @@ class Request
     }
 
     /**
-     * GETパラメータを取得
+     * get GET Parameter
      *
      * @param string $name
-     * @param mixed $default 指定したキーが存在しない場合のデフォルト値
+     * @param mixed $default Default value when specified key does not exist
      * @return mixed
      */
     public function getGet($name, $default = null)
@@ -38,10 +38,10 @@ class Request
     }
 
     /**
-     * POSTパラメータを取得
+     * get POST Parameter
      *
      * @param string $name
-     * @param mixed $default 指定したキーが存在しない場合のデフォルト値
+     * @param mixed $default Default value when specified key does not exist
      * @return mixed
      */
     public function getPost($name, $default = null)
@@ -54,7 +54,7 @@ class Request
     }
 
     /**
-     * ホスト名を取得
+     * get Host name
      *
      * @return string
      */
@@ -68,7 +68,7 @@ class Request
     }
 
     /**
-     * SSLでアクセスされたかどうか判定
+     * determine if it was accessed by SSL
      *
      * @return boolean
      */
@@ -81,7 +81,7 @@ class Request
     }
 
     /**
-     * リクエストURIを取得
+     * get Request URI
      *
      * @return string
      */
@@ -91,7 +91,7 @@ class Request
     }
 
     /**
-     * ベースURLを取得
+     * get Base Url
      *
      * @return string
      */
@@ -111,7 +111,7 @@ class Request
     }
 
     /**
-     * PATH_INFOを取得
+     * get PATH_INFO
      *
      * @return string
      */
