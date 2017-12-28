@@ -43,17 +43,17 @@ class AccountController extends Controller
         $errors = array();
 
         if (!strlen($user_name)) {
-            $errors[] = 'ユーザIDを入力してください';
+            $errors[] = 'Enter User ID';
         } else if (!preg_match('/^\w{3,20}$/', $user_name)) {
-            $errors[] = 'ユーザIDは半角英数字およびアンダースコアを3 ～ 20 文字以内で入力してください';
+            $errors[] = 'Enter User ID within 3 to 20 letters of alphanumeric characters and underscores';
         } else if (!$this->db_manager->get('User')->isUniqueUserName($user_name)) {
-            $errors[] = 'ユーザIDは既に使用されています';
+            $errors[] = 'User ID is already in use';
         }
 
         if (!strlen($password)) {
-            $errors[] = 'パスワードを入力してください';
+            $errors[] = 'Enter Password';
         } else if (4 > strlen($password) || strlen($password) > 30) {
-            $errors[] = 'パスワードは4 ～ 30 文字以内で入力してください';
+            $errors[] = 'Enter Password within 4 to 30 characters';
         }
 
         if (count($errors) === 0) {
@@ -120,11 +120,11 @@ class AccountController extends Controller
         $errors = array();
 
         if (!strlen($user_name)) {
-            $errors[] = 'ユーザIDを入力してください';
+            $errors[] = 'Enter User ID';
         }
 
         if (!strlen($password)) {
-            $errors[] = 'パスワードを入力してください';
+            $errors[] = 'Enter Password';
         }
 
         if (count($errors) === 0) {
@@ -134,7 +134,7 @@ class AccountController extends Controller
             if (!$user
                 || ($user['password'] !== $user_repository->hashPassword($password))
             ) {
-                $errors[] = 'ユーザIDかパスワードが不正です';
+                $errors[] = 'User ID or Password is invalid';
             } else {
                 $this->session->setAuthenticated(true);
                 $this->session->set('user', $user);

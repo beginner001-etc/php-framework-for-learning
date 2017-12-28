@@ -1,9 +1,9 @@
-<?php $this->setLayoutVar('title', 'ログイン') ?>
+<?php $this->setLayoutVar('title', 'Login') ?>
 
-<h2>ログイン</h2>
+<h2>Login</h2>
 
 <p>
-    <a href="<?php echo $base_url; ?>/account/signup">新規ユーザ登録</a>
+    <a href="<?php echo $base_url; ?>/account/signup">New User registration</a>
 </p>
 
 <form action="<?php echo $base_url; ?>/account/authenticate" method="post">
@@ -18,6 +18,6 @@
     )); ?>
 
     <p>
-        <input type="submit" value="ログイン" />
+        <input type="submit" value="Login" />
     </p>
 </form>

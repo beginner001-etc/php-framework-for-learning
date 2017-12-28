@@ -1,6 +1,6 @@
-<?php $this->setLayoutVar('title', 'アカウント登録') ?>
+<?php $this->setLayoutVar('title', 'Account registration') ?>
 
-<h2>アカウント登録</h2>
+<h2>Account registration</h2>
 
 <form action="<?php echo $base_url; ?>/account/register" method="post">
     <input type="hidden" name="_token" value="<?php echo $this->escape($_token); ?>" />
@@ -14,6 +14,6 @@
     )); ?>
 
     <p>
-        <input type="submit" value="登録" />
+        <input type="submit" value="Registration" />
     </p>
 </form>

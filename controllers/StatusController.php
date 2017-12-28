@@ -38,9 +38,9 @@ class StatusController extends Controller
         $errors = array();
 
         if (!strlen($body)) {
-            $errors[] = 'ひとことを入力してください';
+            $errors[] = 'Enter Contribution';
         } else if (mb_strlen($body) > 200) {
-            $errors[] = 'ひとことは200 文字以内で入力してください';
+            $errors[] = 'Enter Contribution at most 200 characters';
         }
 
         if (count($errors) === 0) {
