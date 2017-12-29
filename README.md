@@ -6,7 +6,7 @@ PHP Framework for Learning (You can understand inside of PHP Framework)
 The sample code in the book is a **Framework for Learning**.  
 Framework for learning consists of **Framework** and **Mini Blog Application**. 
 
-I translated from Japanese to English.  
+I translated the sample code from Japanese to English.  
 
 ### **Reference site of Framework for Learning.**  
 http://beginner001.html.xdomain.jp/learning-00.html  
